@@ -232,27 +232,8 @@ export default function LoginScreen() {
       )}
 
       {loginScreen === "login_1" && (
-        <View style={{ flex: 1, backgroundColor: "#fff" }}>
-          {/* Image at the top */}
-          <Image
-            source={require("../../assets/login_image.png")} // Verify path
-            style={{
-              width: "100%",
-              height: hp(50),
-              resizeMode: "cover",
-            }}
-          />
+        <View style={{ flex: 1, backgroundColor: "#314efb" }}>
 
-          {/* Input field and button container */}
-          <View
-            style={{
-              position: "absolute",
-              bottom: hp(5),
-              width: "100%",
-              paddingHorizontal: wp(5),
-              alignItems: "center",
-            }}
-          >
             {/* Logo */}
             <View
               style={{
@@ -283,6 +264,29 @@ export default function LoginScreen() {
               </Text>
             </View>
 
+          {/* Image at the top */}
+          {/* <Image
+            source={require("../../assets/login_image.png")} // Verify path
+            style={{
+              width: "100%",
+              height: hp(100),
+              resizeMode: "cover",
+            }}
+          /> */}
+
+          
+
+          {/* Input field and button container */}
+          <View
+            style={{
+              position: "absolute",
+              bottom: hp(5),
+              width: "100%",
+              paddingHorizontal: wp(5),
+              alignItems: "center",
+            }}
+          >
+          
             {/* Input field */}
             <TextInput
               style={styles.textInput}
