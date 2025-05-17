@@ -11,12 +11,9 @@ import {
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 import CustomButton from "../../components/Button";
-import styles from '../../style.js';
+import styles from "../../style.js";
 
 // Use a random placeholder image from Unsplash
 const image = {
@@ -232,74 +229,29 @@ export default function LoginScreen() {
       )}
 
       {loginScreen === "login_1" && (
-        <View style={{ flex: 1, backgroundColor: "#314efb" }}>
-
-            {/* Logo */}
-            <View
-              style={{
-                width: "100%",
-                alignItems: "center",
-                marginBottom: hp(10),
-                padding: wp(2),
-              }}
-            >
-              <Image
-                source={require("../../assets/logo.png")} // Verify path
-                style={{
-                  width: wp(30),
-                  height: hp(15),
-                  resizeMode: "contain",
-                  marginTop: hp(1),
-                }}
-              />
-              <Text
-                style={{
-                  fontSize: hp(5),
-                  fontWeight: "800",
-                  color: "#fff",
-                  letterSpacing: wp(1),
-                }}
-              >
-                Logo
-              </Text>
-            </View>
-
-          {/* Image at the top */}
-          {/* <Image
-            source={require("../../assets/login_image.png")} // Verify path
-            style={{
-              width: "100%",
-              height: hp(100),
-              resizeMode: "cover",
-            }}
-          /> */}
-
-          
+        <View style={styles.login1Container}>
+          {/* Logo centered on the screen */}
+          <View style={styles.logoContainer}>
+            <Image
+              source={require("../../assets/logo.png")} // Verify path
+              style={styles.logoImage}
+            />
+            <Text style={styles.logoText}>Logo</Text>
+          </View>
 
           {/* Input field and button container */}
-          <View
-            style={{
-              position: "absolute",
-              bottom: hp(5),
-              width: "100%",
-              paddingHorizontal: wp(5),
-              alignItems: "center",
-            }}
-          >
-          
-            {/* Input field */}
+          <View style={styles.inputButtonContainer}>
             <TextInput
-              style={styles.textInput}
+              style={styles.phoneInput}
               placeholder="Enter your phone number"
               keyboardType="phone-pad"
             />
-
             <CustomButton
+              title="Send OTP" // Fixed typo from "Send Otp"
               onPress={() => {
                 console.log("Send OTP pressed");
                 setLoginScreen("login_2");
               }}
-              title="Send Otp"
             />
           </View>
         </View>
@@ -325,7 +277,7 @@ export default function LoginScreen() {
                 shadowRadius: wp(1.2),
                 elevation: 8,
                 borderRadius: wp(3),
-                flex: 1, // Ensure the container takes full height of its parent
+                flex: 1,
               }}
             >
               <View style={{ height: hp(20), justifyContent: "center" }}>
@@ -400,15 +352,7 @@ export default function LoginScreen() {
                             <TextInput
                               key={index}
                               ref={(ref) => (inputs.current[index] = ref)}
-                              style={{
-                                width: wp(10),
-                                height: hp(6),
-                                borderWidth: 1,
-                                borderColor: "#ccc",
-                                borderRadius: wp(2),
-                                textAlign: "center",
-                                fontSize: hp(2.2),
-                              }}
+                              style={styles.textInput}
                               maxLength={1}
                               keyboardType="numeric"
                               value={value[index] || ""}
