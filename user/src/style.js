@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     marginBottom: hp(2), // Reduced margin to keep input/button closer
   },
   logoImage: {
-    width: wp(30),
+    width: wp(10),
     height: hp(15),
     resizeMode: 'contain',
   },
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     height: hp(6),
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: wp(10),
+    borderRadius: wp(1),
     paddingHorizontal: wp(3),
     fontSize: hp(2),
     backgroundColor: '#fff',
