@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     height: hp(6),
-    backgroundColor: '#212121',
-    borderRadius: wp(10),
+    backgroundColor: '#28282B',
+    borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: hp(0.5), // Added padding to prevent text clipping

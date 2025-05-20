@@ -12,7 +12,7 @@ import {
 import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
-import CustomButton from "../../components/Button";
+import CustomButton from "../../components/common/Button.jsx";
 import styles from "../../style.js";
 
 // Use a random placeholder image from Unsplash
